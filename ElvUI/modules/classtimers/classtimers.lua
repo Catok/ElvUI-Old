@@ -4,7 +4,7 @@ local CT = E:NewModule('ClassTimers')
 E.ClassTimers = CT
 
 local auraTypes = { "HELPFUL", "HARMFUL" };
-local BAR_HEIGHT, BAR_SPACING = 22, 1;
+local BAR_HEIGHT, BAR_SPACING = 20, 1;
 
 local function CreateColor(red, green, blue, alpha)
 	return { red / 255, green / 255, blue / 255, alpha };
