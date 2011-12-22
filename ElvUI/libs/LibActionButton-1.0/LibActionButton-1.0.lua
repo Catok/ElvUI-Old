@@ -994,7 +994,8 @@ function UpdateButtonState(self)
 end
 
 local function IsHolyPowerAbility(actionId)
-	if not actionId or UnitInVehicle("player") then return false; end
+	if not actionId then return false; end
+    if type(actionId) ~= "number" then return false; end
 	local actionType, id = GetActionInfo(actionId);
 	if actionType == 'macro' then
 		local macroSpell = GetMacroSpell(id);
