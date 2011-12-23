@@ -308,7 +308,7 @@ function TT:PLAYER_ENTERING_WORLD()
 		end
 		
 		self:HookScript(ItemRefTooltip, "OnTooltipSetItem", 'SetStyle')
-		FriendsTooltip:SetTemplate("Default", true)
+		FriendsTooltip:SetTemplate("Transparent")
 		
 		if IsAddOnLoaded('Blizzard_DebugTools') and not self.debugloaded then
 			self:ADDON_LOADED('ADDON_LOADED', 'Blizzard_DebugTools')
