@@ -107,6 +107,10 @@ do
 	L["This will change the layout of your unitframes, raidframes, and datatexts."] = true;
 	
 	L['INCOMPATIBLE_ADDON'] = "The addon %s is not compatible with ElvUI's %s module. Please disable the incompatible addon or module.";
+	
+	L['Panel Texture'] = true;
+	L['Specify a filename located inside the Interface\\AddOns\\ElvUI\\media\\textures folder that you wish to have set as a panel background.\n\nPlease Note:\n-The image size recommended is 256x128\n-You must do a complete game restart after adding a file to the folder.\n-The file type must be tga format.'] = true;
+	L["Are you sure you want to disband the group?"] = true;
 end
 
 --Media	
@@ -518,6 +522,10 @@ do
 	L['Role Icon'] = true;
 	L['Smart Raid Filter'] = true;
 	L['Override any custom visibility setting in certain situations, EX: Only show groups 1 and 2 inside a 10 man instance.'] = true;
+	L['Heal Prediction'] = true;
+	L['Show a incomming heal prediction bar on the unitframe. Also display a slightly differant colored bar for incoming overheals.'] = true;
+	L['Assist Frames'] = true;
+	L['Tank Frames'] = true;
 end
 
 --Datatext
