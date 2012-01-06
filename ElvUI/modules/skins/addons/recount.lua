@@ -10,11 +10,11 @@ local function SkinFrame(frame)
 	frame.bgMain:SetFrameLevel(frame:GetFrameLevel())
 	
 	frame.bgTitle = CreateFrame('Frame', nil, frame)
-	frame.bgTitle:SetTemplate('Default', true)
+	frame.bgTitle:SetTemplate('Default', false)
 	frame.bgTitle:Point("TOPRIGHT", frame, "TOPRIGHT", 0, -10)
 	frame.bgTitle:Point("TOPLEFT", frame, "TOPLEFT", 0, -9)
 	frame.bgTitle:Point("BOTTOM", frame, "TOP", 0, -29)
-	frame.bgTitle.backdropTexture:SetVertexColor(unpack(E['media'].bordercolor))
+	frame.bgTitle.backdropTexture:SetVertexColor(unpack(E['media'].backdropcolor))
 	frame.bgTitle:SetFrameLevel(frame:GetFrameLevel())
 	
 	frame.CloseButton:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -1, -9)
