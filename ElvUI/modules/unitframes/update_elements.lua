@@ -371,9 +371,6 @@ function UF:PostUpdateAura(unit, button, index, offset, filter, isDebuff, durati
 			local color = DebuffTypeColor[dtype] or DebuffTypeColor.none
 			if (name == "Unstable Affliction" or name == "Vampiric Touch") and E.myclass ~= "WARLOCK" then
 				button:SetBackdropBorderColor(0.05, 0.85, 0.94)
-			elseif
-				unit and unit:find("arena%d") then
-				button:SetBackdropBorderColor(color.r * 0.6, color.g * 0.6, color.b * 0.6)
 			else
 				button:SetBackdropBorderColor(color.r * 0.6, color.g * 0.6, color.b * 0.6)
 			end
