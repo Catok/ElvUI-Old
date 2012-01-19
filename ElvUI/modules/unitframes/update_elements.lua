@@ -366,7 +366,11 @@ function UF:PostUpdateAura(unit, button, index, offset, filter, isDebuff, durati
 	if button.isDebuff then
 		if(not UnitIsFriend("player", unit) and button.owner ~= "player" and button.owner ~= "vehicle") --[[and (not E.isDebuffWhiteList[name])]] then
 			button:SetBackdropBorderColor(unpack(E["media"].bordercolor))
-			button.icon:SetDesaturated(true)
+			if unit and not unit:find('arena%d') then
+				button.icon:SetDesaturated(true)
+			else
+				button.icon:SetDesaturated(false)
+			end
 		else
 			local color = DebuffTypeColor[dtype] or DebuffTypeColor.none
 			if (name == "Unstable Affliction" or name == "Vampiric Touch") and E.myclass ~= "WARLOCK" then
@@ -448,6 +452,7 @@ function UF:HideTicks()
 end
 
 function UF:SetCastTicks(frame, numTicks)
+	UF:HideTicks()
 	if numTicks and numTicks > 0 then
 		local d = frame:GetWidth() / numTicks
 		for i = 1, numTicks do
@@ -462,8 +467,6 @@ function UF:SetCastTicks(frame, numTicks)
 			ticks[i]:SetPoint("CENTER", frame, "LEFT", d * i, 0)
 			ticks[i]:Show()
 		end
-	else
-		UF:HideTicks()
 	end
 end
 
