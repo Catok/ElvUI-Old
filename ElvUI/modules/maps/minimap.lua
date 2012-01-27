@@ -140,7 +140,7 @@ function M:Minimap_UpdateSettings()
 end
 
 function M:LoadMinimap()	
-	local mmholder = CreateFrame('Frame', 'MMHolder', E.UIParent)
+	local mmholder = CreateFrame('Frame', 'MMHolder', Minimap)
 	mmholder:Point("TOPRIGHT", E.UIParent, "TOPRIGHT", -3, -3)
 	mmholder:Width((Minimap:GetWidth() + 29) + E.RBRWidth)
 	mmholder:Height(Minimap:GetHeight() + 53)
@@ -272,5 +272,4 @@ function M:LoadMinimap()
 	UIParent:HookScript('OnShow', function()
 		FarmModeMap:Hide()
 	end)
-end
 end
