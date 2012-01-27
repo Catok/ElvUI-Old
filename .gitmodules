@@ -1,0 +1,3 @@
+[submodule "Mainline"]
+	path = Mainline
+	url = git://git.curseforge.net/wow/elvui/mainline.git
